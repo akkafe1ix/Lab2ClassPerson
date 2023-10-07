@@ -15,22 +15,8 @@ class Person:
     #Метод удаления(увальнения) объекта
     def __del__(self):        
         print(f"До свидания, мистер {self.name} {self.surname}")
-
-#Создание объектов класса
-person1 = Person("Иван", "Иванов", 3)
-person2 = Person("Петр", "Петров", 2)
-person3 = Person("Сидор", "Сидоров")
-
-#Вывод информации
-print(person1.get_info())
-print(person2.get_info())
-print(person3.get_info())
-
-#Нахождение минимального по квалификации
-weakest_link = min([person1, person2, person3], key=lambda x: x.qualification)
-
-#Удаление(увольнение) 
-weakest_link.__del__()
-
-#Чтобы программа не завершалась сразу
-input() 
+    
+    #Метод выдачи премии
+    def Give_bonus(self):
+        print(f"Вот ваша премия, мистер {self.name} {self.surname}")
+        
